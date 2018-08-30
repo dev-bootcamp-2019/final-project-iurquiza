@@ -1,7 +1,7 @@
 pragma solidity ^0.4.17;
 
 import "./File.sol";
-import "../installed_contracts/own3d/contracts/owned.sol";
+import "own3d/owned.sol";
 
 contract FilesPoE is owned {
 
@@ -15,12 +15,11 @@ contract FilesPoE is owned {
     event CircuitBreakerToggled(bool circuitBreaker);
     event ContractTerminated(address owner);
 
-    mapping(bytes32 => bool) private proofs;
-    mapping(bytes32 => address) private files;
+    mapping(bytes32 => address) public files;
     mapping(address => address[]) private userFiles;
 
-    modifier fileNotInProofs(bytes32 ipfsHashDigest) {
-        require(!proofs[ipfsHashDigest], "File already in proofs.");
+    modifier fileNotInFiles(bytes32 ipfsHashDigest) {
+        require(files[ipfsHashDigest] == address(0), "File already in Files.");
         _;
     }
 
@@ -81,7 +80,7 @@ contract FilesPoE is owned {
         public
         circuitBreakerEmergecy()
         stopAddInEmergency()
-        fileNotInProofs(_ipfsHashDigest)
+        fileNotInFiles(_ipfsHashDigest)
         returns (address)
     {
         address newFile = new File(

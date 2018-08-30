@@ -1,3 +1,6 @@
+require("babel-register");
+require("babel-polyfill");
+
 var HDWalletProvider = require("truffle-hdwallet-provider");
 var mnemonic =
   "tennis three puppy senior ring poet toward enforce category sniff priority slice";

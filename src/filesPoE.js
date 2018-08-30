@@ -2,9 +2,28 @@ import web3 from "./web3";
 
 //access our local copy to contract deployed on rinkeby testnet
 //use your own contract address
-const address = "0x7fbff0bfae7efd60da846074b406dde15e2ff0a2";
+const address = "0x646c77be86b12bc102d3d592cd9246a656f2c7ff";
 //use the ABI from your contract
 const abi = [
+  {
+    constant: true,
+    inputs: [
+      {
+        name: "",
+        type: "bytes32"
+      }
+    ],
+    name: "files",
+    outputs: [
+      {
+        name: "",
+        type: "address"
+      }
+    ],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
   {
     anonymous: false,
     inputs: [
@@ -134,12 +153,7 @@ const abi = [
       }
     ],
     name: "addFile",
-    outputs: [
-      {
-        name: "",
-        type: "address"
-      }
-    ],
+    outputs: [],
     payable: false,
     stateMutability: "nonpayable",
     type: "function"

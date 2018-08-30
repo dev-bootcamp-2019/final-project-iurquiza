@@ -2,7 +2,7 @@ import { Table, Button } from "react-bootstrap";
 import React, { Component } from "react";
 import web3 from "../../../web3";
 import filesPoE from "../../../filesPoE";
-import { getIpfsHashFromBytes32 } from "../../../ipfsHash";
+import { getIpfsHashFromBytes32 } from "../../../../helpers/ipfsHash";
 import ImageModal from "./ImageModal";
 
 class ImageList extends Component {
