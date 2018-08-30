@@ -19,6 +19,7 @@ contract FilesPoE is owned {
     event FileAddAbilityToggled(bool fileAddAbility);
     event CircuitBreakerToggled(bool circuitBreaker);
     event ContractTerminated(address owner);
+    event PoEFileDestroyed(address fileAddress);
     
     bool private fileGetAbility = false;
     bool private fileAddAbility = false;
@@ -100,6 +101,18 @@ contract FilesPoE is owned {
     {
         emit ContractTerminated(owner);
         selfdestruct(owner);
+    }
+
+        /**
+     * @dev Destroys the contract instance.
+     * @notice Can only be called by the contract's owner.
+     */
+    function destroyFile(address fileAddress)
+        public
+        onlyowner()
+    {
+        emit PoEFileDestroyed(fileAddress);
+        File(fileAddress).destroy();
     }
 
     /**

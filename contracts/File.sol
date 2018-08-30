@@ -11,7 +11,7 @@ pragma solidity ^0.4.17;
  */
 contract File is owned {
 
-    event ContractTerminated(address owner);
+    event FileDestroyed(address owner);
 
     struct Data {
         bytes32 _ipfsHashDigest;
@@ -83,11 +83,11 @@ contract File is owned {
      * @dev Destroys the contract instance.
      * @notice Can only be called by the contract's owner.
      */
-    function terminate()
+    function destroy()
         public
         onlyowner()
     {
-        emit ContractTerminated(owner);
+        emit FileDestroyed(owner);
         selfdestruct(owner);
     }
 }

@@ -2,7 +2,7 @@ import web3 from "./web3";
 
 //access our local copy to contract deployed on rinkeby testnet
 //use your own contract address
-const address = "0x646c77be86b12bc102d3d592cd9246a656f2c7ff";
+const address = "0x2e2c5ff63d8403ee1850e0f087b1b19938a5cab5";
 //use the ABI from your contract
 const abi = [
   {
@@ -85,6 +85,18 @@ const abi = [
     type: "event"
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        name: "fileAddress",
+        type: "address"
+      }
+    ],
+    name: "PoEFileDestroyed",
+    type: "event"
+  },
+  {
     constant: false,
     inputs: [],
     name: "toggleFileGetAbility",
@@ -124,6 +136,20 @@ const abi = [
     constant: false,
     inputs: [
       {
+        name: "fileAddress",
+        type: "address"
+      }
+    ],
+    name: "destroyFile",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    constant: false,
+    inputs: [
+      {
         name: "_ipfsHashDigest",
         type: "bytes32"
       },
@@ -140,7 +166,7 @@ const abi = [
         type: "uint256"
       },
       {
-        name: "_mimeType",
+        name: "_type",
         type: "string"
       },
       {
@@ -153,7 +179,12 @@ const abi = [
       }
     ],
     name: "addFile",
-    outputs: [],
+    outputs: [
+      {
+        name: "",
+        type: "address"
+      }
+    ],
     payable: false,
     stateMutability: "nonpayable",
     type: "function"

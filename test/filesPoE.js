@@ -101,4 +101,15 @@ contract("FilesPoE", async accounts => {
       assert.ok(web3.isAddress(userFileAddress));
     }
   });
+
+  it("destroys a file and logs event", async () => {
+    const filesPoE = await FilesPoE.new();
+    await addsFileHelper(filesPoE, ipfsHash1, accounts[0]);
+    const ipfsHash32 = getBytes32FromIpfsHash(ipfsHash1);
+    const fileAddress = await filesPoE.files(ipfsHash32);
+
+    const fileDestroyed = await filesPoE.destroyFile(fileAddress);
+    const event = fileDestroyed.logs[0].event;
+    assert.equal(event, "PoEFileDestroyed");
+  });
 });
