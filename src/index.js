@@ -23,7 +23,7 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
         <Route path="upload" component={UserIsAuthenticated(Upload)} />
-        <Route path="myImages" component={UserIsAuthenticated(ImageList)} />
+        <Route path="myimages" component={UserIsAuthenticated(ImageList)} />
       </Route>
     </Router>
   </Provider>,
