@@ -1,7 +1,7 @@
 import {
   getBytes32FromIpfsHash,
   getIpfsHashFromBytes32
-} from "../helpers/ipfsHash";
+} from "../src/helpers/ipfsHash";
 
 var FilesPoE = artifacts.require("./FilesPoE.sol");
 

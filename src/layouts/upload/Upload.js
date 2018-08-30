@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import web3 from "../../web3";
 import ipfs from "../../ipfs";
 import filesPoE from "../../filesPoE";
-import { getBytes32FromIpfsHash } from "../../../helpers/ipfsHash";
+import { getBytes32FromIpfsHash } from "../../helpers/ipfsHash";
 
 class Upload extends Component {
   constructor(props, { authData }) {
