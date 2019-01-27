@@ -24,9 +24,9 @@ To test the application clone the repository.
 
 From the root directory of the cloned repository run the following commands.
 
-docker image build -t react:app .
+```docker image build -t react:app .```
 
-docker container run -it -p 3000:3000 react:app
+```docker container run -it -p 3000:3000 react:app```
 
 Once the application is being server open a browser go to:
 http://localhost:3000/
@@ -35,19 +35,19 @@ This application is just a proof-of-concept and is insecure.
 
 The following files should be updated with your information and implemented/stored securly server-side:
 
-src/util/connectors.js
+```src/util/connectors.js```
 
-src/user/ui/loginbutton/LoginButtonActions.js
+```src/user/ui/loginbutton/LoginButtonActions.js```
 
-src/filesPoE.js
+```src/filesPoE.js```
 
-truffle.js
+```truffle.js```
 
 The contracts have been deployed to the Rinkeby testnet, so you can also test the application by installing node and yarn, then cloning the repository, and then running the following commands from the root directory of the cloned repository:
 
-yarn install
+```yarn install```
 
-yarn start
+```yarn start```
 
 I tried deploying the application in an AWS S3 bucket, but could not generate a production build.
 
