@@ -10,8 +10,8 @@ http://localhost:3000/upload
 The user can also retrieve the images and their associated data.
 http://localhost:3000/myimages
 
-The application uses 3 Solidity besides the ones involved in uPort and IPFS.
-One contracts is owned from the own3d EthPM package.
+The application uses 3 Solidity contracts besides the ones involved in uPort and IPFS.
+One contract is 'owned' from the own3d EthPM package.
 The other two are 'FilesPoE.sol' and 'File.sol' specifically developed for this application.
 
 ## How to set it up and run a local development server
