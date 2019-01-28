@@ -31,6 +31,10 @@ From the root directory of the cloned repository run the following commands.
 Once the application is being served open a browser to:
 http://localhost:3000/
 
+Use the top navigation bar to go to the different sections of the application.
+
+You will have to authenticate on each page using uPort as the authenticated state is not currently stored.
+
 This application is just a proof-of-concept and is insecure.
 
 The following files should be updated with your information and implemented/stored securly server-side:
