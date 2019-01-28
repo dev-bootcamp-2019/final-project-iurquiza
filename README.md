@@ -11,7 +11,7 @@ The user can also retrieve the images and their associated data.
 http://localhost:3000/myimages
 
 The application uses 3 Solidity contracts besides the ones involved in uPort and IPFS.
-One contract is 'owned' from the own3d EthPM package.
+One is the library contract 'owned' from the own3d EthPM package.
 The other two are 'FilesPoE.sol' and 'File.sol' specifically developed for this application.
 
 ## How to set it up and run a local development server
@@ -28,7 +28,7 @@ From the root directory of the cloned repository run the following commands.
 
 ```docker container run -it -p 3000:3000 react:app```
 
-Once the application is being server open a browser go to:
+Once the application is being served open a browser to:
 http://localhost:3000/
 
 This application is just a proof-of-concept and is insecure.
@@ -49,6 +49,6 @@ The contracts have been deployed to the Rinkeby testnet, so you can also test th
 
 ```yarn start```
 
-I tried deploying the application in an AWS S3 bucket, but could not generate a production build.
+I tried deploying the application to an AWS S3 bucket, but could not generate a production build.
 
 The configuration for create-react-app and ipfs-api which were used in the application conflict and cause the build to fail.
