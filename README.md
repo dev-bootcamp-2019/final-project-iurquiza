@@ -20,7 +20,9 @@ To test the application you will need to install the uPort application in you mo
 
 You will also need to have Docker installed.
 
-To test the application clone the repository.
+To test the application:
+
+Clone the repository.
 
 From the root directory of the cloned repository run the following commands.
 
@@ -37,11 +39,11 @@ You will have to authenticate on each page using uPort as the authenticated stat
 
 In order to upload an image you will have to have Metamask installed in you browser and have an account funded in the Rinkeby network.
 
-Note that whatever you upload to IPFS cannot be deleted, so be mindful about what you upload and who know the IPFS hash.
+Note that whatever you upload to IPFS cannot be deleted, so be mindful about what you upload and who knows the IPFS hash.
 
 This application is just a proof-of-concept and is insecure.
 
-The following files should be updated with your information and implemented/stored securly server-side:
+The following files should be updated with your information and should not be public. They should be implemented/stored securly:
 
 ```src/util/connectors.js```
 
