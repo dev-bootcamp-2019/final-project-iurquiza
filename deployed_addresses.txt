@@ -1,0 +1,3 @@
+Contract deployed on Rinkeby testnet
+
+address = "0x2e2c5ff63d8403ee1850e0f087b1b19938a5cab5";
