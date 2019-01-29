@@ -59,6 +59,6 @@ The contracts have been deployed to the Rinkeby testnet, so you can also test th
 
 ```yarn start```
 
-I tried deploying the application to an AWS S3 bucket, but could not generate a production build.
+I was unable to generate a production build, so I did not deploy the application to the internet.
 
 The configuration for `create-react-app` and `ipfs-api` which were used in the application conflict and cause the build to fail.
