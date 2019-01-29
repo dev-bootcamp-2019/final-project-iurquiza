@@ -37,6 +37,8 @@ You will have to authenticate on each page using uPort as the authenticated stat
 
 In order to upload an image you will have to have Metamask installed in you browser and have an account funded in the Rinkeby network.
 
+Note that whatever you upload to IPFS cannot be deleted, so be mindful about what you upload and who know the IPFS hash.
+
 This application is just a proof-of-concept and is insecure.
 
 The following files should be updated with your information and implemented/stored securly server-side:
