@@ -35,7 +35,7 @@ Use the top navigation bar to go to the different sections of the application.
 
 You will have to authenticate on each page using uPort as the authenticated state is not currently stored.
 
-In order to upload an image you will have to have Metamask installed in you browser, and have an account funded in the Rinkeby network.
+In order to upload an image you will have to have Metamask installed in you browser and have an account funded in the Rinkeby network.
 
 This application is just a proof-of-concept and is insecure.
 
@@ -57,4 +57,4 @@ The contracts have been deployed to the Rinkeby testnet, so you can also test th
 
 I tried deploying the application to an AWS S3 bucket, but could not generate a production build.
 
-The configuration for create-react-app and ipfs-api which were used in the application conflict and cause the build to fail.
+The configuration for `create-react-app` and `ipfs-api` which were used in the application conflict and cause the build to fail.
